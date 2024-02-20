@@ -4,7 +4,10 @@ import SlimSelect from 'slim-select'
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
-const error = document.querySelector('.error'); // Dodajemy error 
+const error = document.querySelector('.error'); // Dodajemy error  
+
+loader.style.display = 'none'; 
+error.style.display = 'none'
 
 try {
   fetchBreeds().then(data => renderSelect(data));
